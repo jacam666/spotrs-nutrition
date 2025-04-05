@@ -7,10 +7,12 @@ import {
     CardMedia,
     CardContent,
     Typography,
-    Grid,
     Container,
     Box,
 } from "@mui/material";
+// ✅ correct for MUI v5+
+import Grid from '@mui/material/Grid';
+
 import TailWindNavbar from "@/components/TailwindNavbar";
 import Image from "next/image";
 import Footer from "@/components/Footer";
