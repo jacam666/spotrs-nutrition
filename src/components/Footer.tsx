@@ -1,7 +1,6 @@
 import React from 'react';
 import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
 import Link from 'next/link';
-//import { Link } from 'react-router-dom';
 
 export default function Footer() {
     return (
@@ -12,7 +11,7 @@ export default function Footer() {
                 </div>
 
                 <div>
-                    <a href='https://www.facebook.com/uksnc' className='me-4 text-reset'>
+                    <Link href='https://www.facebook.com/uksnc' className='me-4 text-reset'>
                         <button
                             type="button"
                             data-twe-ripple-init
@@ -28,8 +27,8 @@ export default function Footer() {
                                 </svg>
                             </span>
                         </button>
-                    </a>
-                    <a href='https://twitter.com/SNC52678131' className='me-4 text-reset'>
+                    </Link>
+                    <Link href='https://twitter.com/SNC52678131' className='me-4 text-reset'>
                         <button
                             type="button"
                             data-twe-ripple-init
@@ -45,8 +44,8 @@ export default function Footer() {
                                 </svg>
                             </span>
                         </button>
-                    </a>
-                    <a href='https://www.instagram.com/snc_supplements_/' className='me-4 text-reset'>
+                    </Link>
+                    <Link href='https://www.instagram.com/snc_supplements_/' className='me-4 text-reset'>
                         <button
                             type="button"
                             data-twe-ripple-init
@@ -62,7 +61,7 @@ export default function Footer() {
                                 </svg>
                             </span>
                         </button>
-                    </a>
+                    </Link>
                 </div>
             </section>
 
