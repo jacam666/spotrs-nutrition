@@ -8,11 +8,8 @@ import {
     CardContent,
     Typography,
     Container,
-    Box,
 } from "@mui/material";
-// ✅ correct for MUI v5+
-import Grid from '@mui/material/Grid';
-
+import Grid from "@mui/material/Grid"; // ✅ Separate import to avoid TS errors
 import TailWindNavbar from "@/components/TailwindNavbar";
 import Image from "next/image";
 import Footer from "@/components/Footer";
@@ -114,12 +111,12 @@ export default function Proteins() {
                 priority
             />
             <Container sx={{ py: 4 }}>
-                <Typography variant="h4" gutterBottom className="mx-auto text-center font-bold">
+                <Typography variant="h4" gutterBottom align="center" fontWeight="bold">
                     Protein Products
                 </Typography>
-                <Grid container spacing={4} className="flex flex-col items-center justify-center">
+                <Grid container spacing={4}>
                     {ProteinProducts.map((product) => (
-                        <Grid item key={product.id} xs={12} sm={6} md={4}>
+                        <Grid key={product.id} size={{ xs: 12, sm: 6, md: 4 }}>
                             <Card elevation={0}>
                                 <CardActionArea>
                                     <CardMedia
@@ -128,7 +125,6 @@ export default function Proteins() {
                                         image={product.image}
                                         alt={product.name}
                                     />
-                                    <Box className="flex flex-col">
                                     <CardContent>
                                         <Typography gutterBottom variant="h6" component="div">
                                             {product.name}
@@ -141,12 +137,14 @@ export default function Proteins() {
                                         <Typography variant="body2" color="text.secondary">
                                             Size: {product.size}
                                         </Typography>
-                                        <Typography variant="subtitle1" fontWeight="bold" sx={{ mt: 1 }}>
+                                        <Typography
+                                            variant="subtitle1"
+                                            fontWeight="bold"
+                                            sx={{ mt: 1 }}
+                                        >
                                             £{product.price.toFixed(2)}
                                         </Typography>
                                     </CardContent>
-                                    </Box>
-                                    
                                 </CardActionArea>
                             </Card>
                         </Grid>
@@ -155,6 +153,5 @@ export default function Proteins() {
             </Container>
             <Footer />
         </div>
-        
     );
 }
