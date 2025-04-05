@@ -4,8 +4,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 const navigation = [
-    { name: 'Home', href: '#', current: true },
-    { name: 'Proteins', href: '#', current: false },
+    { name: 'Home', href: '/', current: true },
+    { name: 'Proteins', href: '/proteins', current: false },
     { name: 'Pre-Workouts', href: '#', current: false },
     { name: 'Fat Loss', href: '#', current: false },
     { name: 'General Wellbeing', href: '#', current: false },
@@ -18,9 +18,9 @@ function classNames(...classes: (string | boolean | undefined)[]): string {
     return classes.filter(Boolean).join(' ')
 }
 
-export default function TailWindNavbar() {
+export default function TailWindNavbar() {   
     return (
-        <Disclosure as="nav" className="footer_background">
+        <Disclosure as="nav" className="bg-gray-800">
             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
                 <div className="relative flex h-16 items-center justify-between">
                     <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -34,21 +34,22 @@ export default function TailWindNavbar() {
                     </div>
                     <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                         <div className="flex shrink-0 items-center">
-                            <Link href="#">
+                            <Link href="/">
                                 <Image
                                     src="/sncImages/logo-copy.png"
                                     alt="SNC Logo"
                                     width={120}
                                     height={40}
                                     priority
+                                    className='invert'
                                 />
                             </Link>
 
                         </div>
-                        <div className="hidden sm:ml-6 sm:block text-red-500">
+                        <div className="hidden sm:ml-6 sm:block">
                             <div className="flex space-x-4">
                                 {navigation.map((item) => (
-                                    <a
+                                    <Link
                                         key={item.name}
                                         href={item.href}
                                         aria-current={item.current ? 'page' : undefined}
@@ -58,7 +59,7 @@ export default function TailWindNavbar() {
                                         )}
                                     >
                                         <span className='text-white'>{item.name}</span>
-                                    </a>
+                                    </Link>
                                 ))}
                             </div>
                         </div>
@@ -128,11 +129,12 @@ export default function TailWindNavbar() {
                             href={item.href}
                             aria-current={item.current ? 'page' : undefined}
                             className={classNames(
-                                item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                                item.current ? 'bg-gray-900 text-white' : 
+                                'text-gray-300 hover:bg-gray-700 hover:text-white',
                                 'block rounded-md px-3 py-2 text-base font-medium',
                             )}
                         >
-                            {item.name}
+                            <span className='text-white'>{item.name}</span>
                         </DisclosureButton>
                     ))}
                 </div>

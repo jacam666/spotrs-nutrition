@@ -18,7 +18,6 @@ export default function Home() {
       {/* <ResponsiveAppBar /> */}
       <TailWindNavbar />
     <div className="bg-gray-50 min-h-screen py-8 px-4 md:px-12">
-      
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <Card  elevation={0} >
           <CardActionArea >

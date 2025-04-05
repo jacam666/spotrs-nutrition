@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function Footer() {
     return (
-        <MDBFooter className='footer_background text-center text-lg-start'>
+        <MDBFooter className='bg-gray-800 text-center text-lg-start'>
             <section className='d-flex justify-content-center justify-content-lg-between p-4 '>
                 <div className='me-5 d-none d-lg-block'>
                     <span>Get connected with us on social networks:</span>
@@ -118,7 +118,7 @@ export default function Footer() {
             </section>
 
             <div className='text-center text-sm  p-2'  >
-                © 2023 Copyright:
+                © 2025 Copyright:
                 <p className='text-reset text-lg font-bold' >
                     CAMDesigns.com
                 </p>
