@@ -14,7 +14,7 @@ const navigation = [
     { name: 'Basket', href: '#', current: false },
 ]
 
-function classNames(...classes) {
+function classNames(...classes: (string | boolean | undefined)[]): string {
     return classes.filter(Boolean).join(' ')
 }
 
