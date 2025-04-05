@@ -6,15 +6,17 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import CardActionArea from '@mui/material/CardActionArea';
-import ResponsiveAppBar from "@/components/Navbar";
+//import ResponsiveAppBar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import TailWindNavbar from "@/components/TailwindNavbar";
 //import LabelBottomNavigation from "@/components/FooterNavigation";
 
 
 export default function Home() {
   return (
     <div>
-      <ResponsiveAppBar />
+      {/* <ResponsiveAppBar /> */}
+      <TailWindNavbar />
     <div className="bg-gray-50 min-h-screen py-8 px-4 md:px-12">
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

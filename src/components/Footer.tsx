@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function Footer() {
     return (
-        <MDBFooter className='text-center text-lg-start  bg-orange-400'>
+        <MDBFooter className='footer_background text-center text-lg-start'>
             <section className='d-flex justify-content-center justify-content-lg-between p-4 '>
                 <div className='me-5 d-none d-lg-block'>
                     <span>Get connected with us on social networks:</span>
@@ -78,7 +78,7 @@ export default function Footer() {
                                 SNC SUPPLEMENTS has been established since 2017 The products we produce are designed and used by experienced Bodybuilders. We aim at producing the highest quality products.
                             </p>
                         </MDBCol>
-{/* 
+                        {/* 
                         <MDBCol md="2" lg="2" xl="2" className='mx-auto mb-4'>
                             <h6 className='text-uppercase fw-bold mb-4'>Products</h6>
                             <p>
@@ -118,7 +118,7 @@ export default function Footer() {
                 </MDBContainer>
             </section>
 
-            <div className='text-center text-sm  p-2' bg-black >
+            <div className='text-center text-sm  p-2'  >
                 © 2023 Copyright:
                 <p className='text-reset text-lg font-bold' >
                     CAMDesigns.com
