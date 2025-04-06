@@ -5,12 +5,12 @@ import Link from 'next/link'
 
 const navigation = [
     { name: 'Home', href: '/', current: true },
-    { name: 'Proteins', href: '/proteins', current: false },
-    { name: 'Pre-Workouts', href: '#', current: false },
-    { name: 'Fat Loss', href: '#', current: false },
+    { name: 'Proteins', href: 'proteins', current: false },
+    { name: 'Pre-Workouts', href: 'pre-workouts', current: false },
+    { name: 'Fat Loss', href: 'fatLoss', current: false },
     { name: 'General Wellbeing', href: '#', current: false },
-    { name: 'Plans', href: '#', current: false },
-    { name: 'The Studio', href: '#', current: false },
+    { name: 'Plans', href: 'plans', current: false },
+    { name: 'The Studio', href: 'studio', current: false },
     { name: 'Basket', href: '#', current: false },
 ]
 
