@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import 'mdb-react-ui-kit/dist/css/mdb.min.css'
+// import 'mdb-react-ui-kit/dist/css/mdb.min.css'
 // import "@fortawesome/fontawesome-free/css/all.min.css"
 import "@radix-ui/themes/styles.css";
 import "./globals.css";
