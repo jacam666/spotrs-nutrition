@@ -77,28 +77,6 @@ export default function Footer() {
                                 SNC SUPPLEMENTS has been established since 2017 The products we produce are designed and used by experienced Bodybuilders. We aim at producing the highest quality products.
                             </p>
                         </MDBCol>
-                        {/* 
-                        <MDBCol md="2" lg="2" xl="2" className='mx-auto mb-4'>
-                            <h6 className='text-uppercase fw-bold mb-4'>Products</h6>
-                            <p>
-                                <Link href='/ProteinCataloguePage' className='text-reset'>Protein</Link>  
-                            </p>
-                            <p>
-                            <Link href='/PreWorkoutCataloguePage' className='text-reset'>Pre-Workouts</Link>
-                            </p>
-                            <p>
-                            <Link href='/FatLossCataloguePage' className='text-reset'>Fat Loss</Link>
-                            </p>
-                            <p>
-                            <Link href='/WellBeingCataloguePage' className='text-reset'>General Wellbeing</Link>
-                            </p>
-                            <p>
-                            <Link href='/TrainingAndDietPage' className='text-reset'>Training and Diet Plans</Link>
-                            </p>
-                            <p>
-                            <Link href='/TheStudioPage' className='text-reset'>The Studio</Link>
-                            </p>
-                        </MDBCol> */}
                         <MDBCol md="4" lg="3" xl="3" className='mx-auto mb-md-0 mb-4'>
                             <h6 className='text-uppercase fw-bold mb-4'>Contact</h6>
                             <p>

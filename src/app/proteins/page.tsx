@@ -12,7 +12,7 @@ import {
 import Grid from "@mui/material/Grid"; // ✅ Separate import to avoid TS errors
 import TailWindNavbar from "@/components/TailwindNavbar";
 import Image from "next/image";
-import Footer from "@/components/Footer";
+//import Footer from "@/components/Footer";
 
 interface Product {
     id: number;
@@ -111,7 +111,7 @@ export default function Proteins() {
                 priority
             />
             <Container sx={{ py: 4 }}>
-                <Typography variant="h4" gutterBottom align="center" fontWeight="bold">
+                <Typography className="text-gray-900" variant="h4" gutterBottom align="center" fontWeight="bold">
                     Protein Products
                 </Typography>
                 <Grid container spacing={4}>
@@ -151,7 +151,7 @@ export default function Proteins() {
                     ))}
                 </Grid>
             </Container>
-            <Footer />
+            {/* <Footer /> */}
         </div>
     );
 }

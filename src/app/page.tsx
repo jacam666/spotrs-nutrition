@@ -95,7 +95,6 @@ export default function Home() {
 
       </div>
     </div>
-    {/* <LabelBottomNavigation /> */}
     <Footer />
     </div>
   );
