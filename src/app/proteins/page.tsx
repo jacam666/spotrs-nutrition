@@ -1,18 +1,18 @@
 "use client";
 
 import React from "react";
-import {
-    Card,
-    CardActionArea,
-    CardMedia,
-    CardContent,
-    Typography,
-    Container,
-} from "@mui/material";
-import Grid from "@mui/material/Grid"; // ✅ Separate import to avoid TS errors
+// import {
+//     Card,
+//     CardActionArea,
+//     CardMedia,
+//     CardContent,
+//     Typography,
+//     Container,
+// } from "@mui/material";
+//import Grid from "@mui/material/Grid"; // ✅ Separate import to avoid TS errors
 import TailWindNavbar from "@/components/TailwindNavbar";
 import Image from "next/image";
-//import Footer from "@/components/Footer";
+import Footer from "@/components/Footer";
 
 interface Product {
     id: number;
@@ -102,56 +102,39 @@ export default function Proteins() {
     return (
         <div>
             <TailWindNavbar />
+            
+            <div className="flex flex-col items-center justify-center pb-4 min-h-screen bg-gradient-to-r from-gray-200 via-slate-200 to-cyan-950 animate-gradient-x">
             <Image
                 src="/sncImages/OnlyWheYBanner.png"
                 alt="banner"
                 width={1920}
                 height={400}
-                className="w-full protein-banner"
+                className="w-full"
                 priority
             />
-            <Container sx={{ py: 4 }}>
-                <Typography className="text-gray-900" variant="h4" gutterBottom align="center" fontWeight="bold">
-                    Protein Products
-                </Typography>
-                <Grid container spacing={4}>
-                    {ProteinProducts.map((product) => (
-                        <Grid key={product.id} size={{ xs: 12, sm: 6, md: 4 }}>
-                            <Card elevation={0}>
-                                <CardActionArea>
-                                    <CardMedia
-                                        component="img"
-                                        height="140"
-                                        image={product.image}
-                                        alt={product.name}
-                                    />
-                                    <CardContent>
-                                        <Typography gutterBottom variant="h6" component="div">
-                                            {product.name}
-                                        </Typography>
-                                        {product.flavour && (
-                                            <Typography variant="body2" color="text.secondary">
-                                                {product.flavour}
-                                            </Typography>
-                                        )}
-                                        <Typography variant="body2" color="text.secondary">
-                                            Size: {product.size}
-                                        </Typography>
-                                        <Typography
-                                            variant="subtitle1"
-                                            fontWeight="bold"
-                                            sx={{ mt: 1 }}
-                                        >
-                                            £{product.price.toFixed(2)}
-                                        </Typography>
-                                    </CardContent>
-                                </CardActionArea>
-                            </Card>
-                        </Grid>
-                    ))}
-                </Grid>
-            </Container>
-            {/* <Footer /> */}
+                            <h1 className="text-4xl text-white font-bold">Proteins</h1>
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
+                                {ProteinProducts.map((product) => (
+                                    <div
+                                        key={product.id}
+                                        className="bg-gray-200/30 backdrop-blur-md border border-white/20 shadow-lg rounded-lg p-4 text-white"
+                                    >
+                                        <Image
+                                            src={`/${product.image}`}
+                                            alt={product.name}
+                                            width={300}
+                                            height={300}
+                                            className="w-full h-52 object-cover rounded-t-lg"
+                                        />
+                                        <h2 className="text-xl text-gray-900 font-semibold mt-4">{product.name}</h2>
+                                        <p className="text-gray-600">{product.flavour}</p>
+                                        <p className="text-gray-600">{product.size}</p>
+                                        <p className="text-lg text-gray-600 font-bold mt-2">${product.price.toFixed(2)}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+            <Footer />
         </div>
     );
 }

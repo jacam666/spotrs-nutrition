@@ -68,9 +68,9 @@ export default function PreWorkouts() {
     return (
         <div>
             <TailWindNavbar />
-            <div className="flex flex-col items-center justify-center py-4 min-h-screen bg-white">
-                <h1 className="text-4xl text-white font-bold">Pre Workouts</h1>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
+            <div className="flex flex-col   py-4 min-h-screen bg-gradient-to-r from-gray-200 via-slate-200 to-cyan-950 animate-gradient-x">
+                <h1 className="text-4xl text-gray-900 text-center font-bold">Pre Workouts</h1>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 p-4">
                     {Workoutproducts.map((product) => (
                         <div
                             key={product.id}
@@ -81,7 +81,7 @@ export default function PreWorkouts() {
                                 alt={product.name}
                                 width={300}
                                 height={300}
-                                className="w-full h-48 object-cover rounded-t-lg"
+                                className="w-full h-52 object-contain rounded-t-lg"
                             />
                             <h2 className="text-xl text-gray-900 font-semibold mt-4">{product.name}</h2>
                             <p className="text-gray-600">{product.flavour}</p>
@@ -90,7 +90,6 @@ export default function PreWorkouts() {
                         </div>
                     ))}
                 </div>
-
             </div>
             <Footer />
         </div>

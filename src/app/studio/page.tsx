@@ -61,45 +61,47 @@ export default function Studio() {
     return (
         <div>
             <TailWindNavbar />
-            <div className="flex flex-col justify-center  min-h-screen py-2 bg-gray-100">
-                <h1 className="text-4xl text-center font-bold text-gray-900">Studio</h1>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 px-4">
-                    <div className="bg-white shadow-md p-4 rounded-lg">
-                        <Image
-                            src="/sncImages/studio-image.jpg"
-                            alt="Studio Image"
-                            width={300}
-                            height={500}
-                            className="rounded-lg mx-auto"
-                            priority
-                        />
-                    </div>
-                    <div className="bg-white shadow-md p-4 rounded-lg">
-                        <Image
-                            src="/sncImages/studio-image.jpg"
-                            alt="Studio Image"
-                            width={300}
-                            height={500}
-                            className="rounded-lg mx-auto"
-                            priority
-                        />
-                    </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-4">
-                    {StudioImages.map((product) => (
-                        <div key={product.id} className="bg-white shadow-md rounded-lg p-4">
-                            <div className="relative w-full">
-                                <Image
-                                    src={`/${product.image}`}
-                                    alt={`Studio Image ${product.id}`}
-                                    width={500}
-                                    height={500}
-                                    className="rounded-lg"
-                                />
-                            </div>
+            <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-700 to-gray-700">
+                <h1 className="text-5xl text-center font-bold text-white pt-4">Our Studio</h1>
+                <div className="flex flex-col items-center justify-center py-4 ">
+                    <div className="flex flex-col sm:flex-row  justify-evenly px-4 gap-6">
+                        <div className="bg-white shadow-md p-4 rounded-lg">
+                            <Image
+                                src="/sncImages/studioPic9.jpg"
+                                alt="Studio Image"
+                                width={300}
+                                height={500}
+                                className="rounded-lg mx-auto"
+                                priority
+                            />
                         </div>
-                    ))}
+                        <div className="bg-white shadow-md p-4 rounded-lg">
+                            <Image
+                                src="/sncImages/studio-image.jpg"
+                                alt="Studio Image"
+                                width={300}
+                                height={500}
+                                className="rounded-lg mx-auto"
+                                priority
+                            />
+                        </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-4">
+                        {StudioImages.map((product) => (
+                            <div key={product.id} className="bg-white shadow-md rounded-lg p-4">
+                                <div className="relative w-full">
+                                    <Image
+                                        src={`/${product.image}`}
+                                        alt={`Studio Image ${product.id}`}
+                                        width={500}
+                                        height={500}
+                                        className="rounded-lg"
+                                    />
+                                </div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
             <Footer />
